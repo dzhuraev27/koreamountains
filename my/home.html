@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Homepage</title>
+    <style>
+
+/*===============NAVBAR MENU==================*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -o-user-select:none;
+}
+
+nav > ul,
+nav > ul > li {
+  outline: 0;
+}
+
+nav > ul > li > a {
+ text-decoration: none;
+}
+
+/* MAIN MENU */
+
+.main-menu {
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  overflow:hidden;
+  background: #0009;
+  transition: width .05s linear;
+  -webkit-transition: width .05s linear;
+  z-index: 10;
+  padding-top: 10px;
+}
+
+.main-menu:hover {
+  width: 180px;
+  overflow:visible;
+}
+
+.main-menu > ul > li {
+  position: relative;
+  display: block;
+  width: 180px;
+}
+
+.main-menu > ul > li > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color:#999;
+  font-size: 1rem;
+  transition:all 0.1s linear;
+  -webkit-transition:all 0.1s linear;
+  padding: 10px 0;
+}
+
+.nav-icon {
+  width: 60px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-text {
+  width: 120px;
+  height: 20px;
+  font-family: "Mulish", sans-serif;
+}
+
+.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.main-menu li:hover > a, .main-menu li.active > a, .main-menu li > a:focus {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(29, 79, 215, 0.7);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    background: white; /* 여기에 원하는 배경색을 입력하세요 */
+    line-height: 1.5;
+    font-size: 16px;
+    color: #fff;
+    overflow-x: hidden; /* 가로 스크롤 제거 */
+}
+
+header {
+    color: #20496a;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+    background: transparent; /* Сделать фон прозрачным */
+}
+
+#text {
+    text-align: center;
+}
+
+.center {
+    display: inline-block;
+}
+
+h1 {
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', serif;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #4e26b1;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#top{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#top::before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height:200px;
+    width: 100%;
+    background:linear-gradient(to top,#fff,transparent);
+    z-index: 1000;
+}
+#man{
+    top: inherit;
+    bottom: 0;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#text{
+    position: relative;
+    color:white;
+    font-size: 10rem;
+}
+#sec{
+    padding:100px;
+  padding-bottom:20px;
+}
+#sec h2{
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color:#20496a;
+    text-align: center;
+}
+
+#support h3 {
+    font-size: 1.8em; /* Задайте размер шрифта для заголовков h3 в секции */
+    color: #20496a; /* Задайте цвет текста для заголовков h3 в секции */
+    margin-bottom: 15px;
+    text-align: center;
+    }
+
+    #support p {
+        font-size: 1.2em; /* Задайте размер шрифта для параграфов в секции */
+        line-height: 1.6;
+        text-align: center; /* Задайте высоту строки для лучшей читаемости текста */
+    }
+
+#sec p{
+    font-size: 1.2rem;
+  line-height:2rem;
+  font-weight:300;
+    color:#20496a;
+}
+footer{
+  margin-top:30px;
+  display:flex;
+  padding:20px;
+  justify-content:space-evenly;
+  align-items:center;
+  background-color:#ffffff;
+}
+footer a{
+  color:#20496a;
+}
+footer a i{
+    transition:0.2s;
+}
+footer a:nth-of-type(3),footer a:nth-of-type(4), footer a:nth-of-type(5){
+font-size:1.3rem;}
+footer a i:hover{
+  transform:translateY(-10px);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fde02f;
+}
+    
+/*------------- WEATHER ---------------*/
+#weather-container {
+  text-align: center;
+    margin-top: 50px;
+    color: #333; /* Цвет текста */
+    background-color: #fff; /* Цвет фона */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+  /*------------CARDS--------------*/
+  :root{
+  --background-dark: #000000;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+body{
+  height: 100%;
+}
+
+.hero-section{
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #ffffff 0%, #ffffff 150%);
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  list-style: none;
+  position: relative;
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(5px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
+/* ABOUT US */
+
+    </style>
+</head>
+<body>  
+      <!--===========Nav Bar=================-->
+                <nav class="main-menu">
+                  <ul>
+                    <li>
+                      <a href="/home">
+                        <i class="fa fa-home nav-icon"></i>
+                        <span class="nav-text">Home</span>
+                      </a>
+                    </li>
+            
+                    <li>
+                      <a href="/favoriteplace">
+                        <i class="fa fa-image nav-icon"></i>
+                        <span class="nav-text">Gallery</span>
+                      </a>
+                    </li>
+            
+                    <li>
+                      <a href="/blog">
+                        <i class="fa fa-pen nav-icon"></i>
+                        <span class="nav-text">Blog</span>
+                      </a>
+                    </li>
+            
+                    <li>
+                      <a href="/contactsus">
+                        <i class="fa fa-envelope nav-icon"></i>
+                        <span class="nav-text">Messages</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/logout">
+                        <i class="fa fa-right-from-bracket nav-icon"></i>
+                        <span class="nav-text">Log out</span>
+                      </a>
+                    </li>
+                  </ul>
+                 
+                 <!--- <ul class="logout">
+                    <li>
+                      <a href="/logout">
+                        <i class="fa fa-right-from-bracket nav-icon"></i>
+                        <span class="nav-text">
+                          Logout
+                        </span>
+                      </a>
+                    </li>  
+                  </ul>-->
+               </nav>
+            </div> 
+                    </div>
+      </nav>
+  </header>
+  <section id="top">
+     <img src="https://aryan-tayal.github.io/Mountains-Parallax/bg.jpg" id="bg" />
+     <h2 id="text">
+    <span class="center">KOREA</span> <br> MOUNTAINS
+</h2>
+     <img src="https://aryan-tayal.github.io/Mountains-Parallax/man.png" id="man" />
+     <img src="https://aryan-tayal.github.io/Mountains-Parallax/clouds_1.png" id="clouds_1" />
+     <img src="https://aryan-tayal.github.io/Mountains-Parallax/clouds_2.png" id="clouds_2" />
+     <img src="https://aryan-tayal.github.io/Mountains-Parallax/mountain_left.png" id="mountain_left" />
+     <img src="https://aryan-tayal.github.io/Mountains-Parallax/mountain_right.png
+" id="mountain_right" />
+   </section>
+
+   <section id="sec">
+     <h2>Discover South Korea's stunning mountains!</h2>
+     <p>
+       The Korean Peninsula boasts a stunning and diverse landscape, with its mountainous terrain standing out as one of its most prominent features. The Korean mountains, known collectively as the Korean Alps or Korean Range, form a breathtaking natural backdrop that has played a significant role in shaping the history, culture, and identity of both North and South Korea. One of the most notable mountain ranges on the Korean Peninsula is the Baekdudaegan, which translates to "The Great White Mountain Range." Extending from the volcanic peak of Mount Baekdu in the north to the volcanic Hallasan in the south, this majestic mountain range traverses the entire length of the Korean Peninsula, stretching approximately 1,400 kilometers. Mount Baekdu, located on the border between North Korea and China, is the tallest peak on the peninsula, standing at 2,744 meters above sea level. This stratovolcano holds great cultural and historical significance, as it is considered the mythical birthplace of Dangun, the legendary founder of Korea. In South Korea, the Taebaek Mountains form a picturesque range along the eastern edge of the peninsula. These mountains, characterized by their rugged terrain and dense forests, are a popular destination for hikers, nature enthusiasts, and those seeking refuge from the hustle and bustle of urban life. Seoraksan, one of the most famous peaks in the Taebaek range, is renowned for its stunning granite formations, crystal-clear streams, and diverse plant and animal life. The Nakdong River, South Korea's longest river, meanders through the Nakdonggangmaek mountain range, contributing to the creation of a unique and captivating landscape. The Nakdonggangmaek range is known for its scenic beauty, with rolling hills, dense forests, and numerous hiking trails that offer panoramic views of the surrounding countryside. Beyond their aesthetic appeal, the Korean mountains hold cultural and spiritual significance for the Korean people. Many temples and hermitages are nestled in the secluded valleys and atop the peaks, providing a tranquil retreat for monks and visitors alike. These sacred sites, such as Haeinsa Temple in Gayasan National Park, are home to invaluable cultural treasures, including the Tripitaka Koreana, a collection of Buddhist scriptures carved onto wooden blocks. Throughout history, the Korean mountains have also served as natural fortresses, offering strategic advantages in times of conflict. The rugged terrain has witnessed the ebb and flow of Korean history, from ancient kingdoms to modern times. The mountains have been both a source of inspiration for poets and artists and a refuge for those seeking solitude and introspection. In conclusion, the Korean mountains stand as not only a testament to the geological beauty of the region but also as a symbol of Korea's rich cultural and historical tapestry. Whether for hiking, spiritual reflection, or simply enjoying the breathtaking vistas, the Korean mountains invite locals and visitors alike to explore their peaks, valleys, and hidden wonders. </p>
+       <h3 class="center-text">Are you on the lookout for an adventurous mountain getaway this weekend?<br> Look no further, step into a realm of peaks and possibilities right here!
+       </h3>
+   </section>
+<!------------------CARDS-------------------->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+<section class="hero-section">
+  <div class="card-grid">
+    <a class="card">
+      <div class="card__background" style="background-image: url(https://health.chosun.com/site/data/img_dir/2019/04/30/2019043001641_0.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">MOUNTAINS KOREA</p>
+        <h3 class="card__heading">Hiking is good for the body</h3>
+      </div>
+    </a>
+    <a class="card">
+      <div class="card__background" style="background-image: url(https://post-phinf.pstatic.net/MjAyMjA4MDNfOTkg/MDAxNjU5NDg0Njg1NTQy.5JdOg-7UkWnPJyBGRbixCgebOFIY6V8CN9DNRAiDuVcg.oMA-IEvB72q-aJ4TQXk4yw4dPPNHRjZ7QgPPQTibVw8g.JPEG/%EB%93%B1%EC%82%B0_%EC%9D%B8%EB%AC%BC%EC%B4%AC%EC%98%81%EB%B2%95_2.jpg?type=w800_q75)"></div>
+      <div class="card__content">
+        <p class="card__category">MOUNTAINS KOREA</p>
+        <h3 class="card__heading">You can see a beautiful landscape</h3>
+      </div>
+    </a>
+    <a class="card">
+      <div class="card__background" style="background-image: url(https://i.namu.wiki/i/8Y_QbvijK6HlKd94O_ONOgnWdWMhuQuf6bEK1fYF6NoHxcHCBBL7wrFi5C3vw5SH7T65VC7irGcvXrvDEr2QxQ.webp)"></div>
+      <div class="card__content">
+        <p class="card__category">MOUNTAINS KOREA</p>
+        <h3 class="card__heading">Hallasan is the highest mountain at 1,947m</h3>
+      </div>
+    </li>
+    <a class="card">
+      <div class="card__background" style="background-image: url(https://www.newspeak.kr/news/photo/202201/374276_230804_0503.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">MOUNTAINS KOREA</p>
+        <h3 class="card__heading">You must go in winter</h3>
+      </div>
+    </a>
+  <div>
+</section>
+
+<!------------------WEATHER-------------------->
+
+<div id="weather-container">
+  <h2>Weather Information</h2>
+  <p id="location">Loading...</p>
+  <p id="temperature">Temperature: Loading...</p>
+  <p id="description">Description: Loading...</p>
+</div>
+       <br>
+       <br>
+       <br>
+<!-----------------ABOUT US----------------->
+
+
+<footer>
+ <a href="/home"><i class="fa-solid fa-house"></i></a>
+ <a href=""><i class="fa-solid fa-mountain-sun"></i></a>
+ <a href=""><i class="fa-solid fa-person-hiking"></i></a>
+ <a href=""><i class="fa-solid fa-people-group"></i></a>
+ <a href=""><i class="fa-solid fa-gears"></i></a>
+ <p>&copy; 2023 Mountain Explorer</p>
+</footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mountainLeft = document.querySelector("#mountain_left");
+      const mountainRight = document.querySelector("#mountain_right");
+      const cloud1 = document.querySelector("#clouds_1");
+      const cloud2 = document.querySelector("#clouds_2");
+      const text = document.querySelector("#text");
+      const man = document.querySelector("#man");
+  
+      if (mountainLeft && mountainRight && cloud1 && cloud2 && text && man) {
+        window.addEventListener("scroll", () => {
+          let value = scrollY;
+          mountainLeft.style.left = `-${value / 0.7}px`;
+          cloud2.style.left = `-${value * 2}px`;
+          mountainRight.style.left = `${value / 0.7}px`;
+          cloud1.style.left = `${value * 2}px`;
+          text.style.bottom = `-${value}px`;
+          man.style.height = `${window.innerHeight - value}px`;
+        });
+      }
+    });
+
+    // WEATHER
+    document.addEventListener("DOMContentLoaded", getWeather);
+
+        function getWeather() {
+            // Replace "YOUR_API_KEY" with your OpenWeatherMap API key
+            const apiKey = "ac66b2ceea359cbf2a307724680db213";
+            const city = "Seoul"; // You can change the city
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=ac66b2ceea359cbf2a307724680db213&units=standard&q=seoul`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    updateWeather(data);
+                })
+                .catch(error => {
+                    console.error("Error fetching weather data:", error);
+                });
+        }
+
+        function updateWeather(data) {
+          console.log(data);
+
+            var locationElement = document.getElementById("location");
+            var temperatureElement = document.getElementById("temperature");
+            var descriptionElement = document.getElementById("description");
+
+            locationElement.textContent = "Location: " + data.name + ", " + data.sys.country;
+            temperatureElement.textContent = "Temperature: " + (data.main.temp - 273.15).toFixed(2) + "°C";
+            descriptionElement.textContent = "Description: " + data.weather[0].description;
+        }
+  </script>
+
+</body>
